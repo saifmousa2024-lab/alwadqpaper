@@ -1,4 +1,4 @@
-smartrepair
+
 smartrepair/
   index.html
   about.html
@@ -9,7 +9,7 @@ smartrepair/
     app.js
     i18n.js
   assets/
-    hero.jpg   (أي صورة تضعها أنت)
+    hero.jpg   
 css/style.css
 :root{
   --bg:#0b1220;
@@ -22,8 +22,6 @@ css/style.css
   --border:rgba(255,255,255,.12);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius:16px;
-}
-
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
@@ -31,10 +29,8 @@ body{
   background: radial-gradient(1200px 600px at 15% 0%, #152241 0%, var(--bg) 55%);
   color:var(--text);
   line-height:1.6;
-}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-
 .container{max-width:1100px;margin:0 auto;padding:0 18px}
 .section{padding:44px 0}
 .grid{display:grid;gap:18px}
@@ -44,8 +40,6 @@ img{max-width:100%;display:block}
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding:18px;
-}
-
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   gap:10px;
@@ -57,13 +51,11 @@ img{max-width:100%;display:block}
   cursor:pointer;
   transition:.18s ease;
   font-weight:600;
-}
 .btn:hover{transform:translateY(-1px);background: rgba(255,255,255,.10)}
 .btn.primary{background: var(--accent); border-color: transparent}
 .btn.primary:hover{background:#3b7bff}
 .btn.success{background: var(--accent2); border-color: transparent}
 .btn.danger{background: var(--danger); border-color: transparent}
-
 .badge{
   display:inline-flex;align-items:center;gap:8px;
   border:1px solid var(--border);
@@ -71,58 +63,43 @@ img{max-width:100%;display:block}
   color:var(--muted);
   background: rgba(255,255,255,.04);
   font-size: 13px;
-}
-
-.nav{
   position:sticky;top:0;z-index:50;
   backdrop-filter: blur(10px);
   background: rgba(11,18,32,.72);
   border-bottom:1px solid var(--border);
-}
-.nav-inner{
+.nav-inner
   display:flex;align-items:center;justify-content:space-between;
   padding:14px 0;
-}
-.brand{
+.brand
   display:flex;align-items:center;gap:10px;
   font-weight:800;letter-spacing:.2px;
-}
 .brand-mark{
   width:34px;height:34px;border-radius:10px;
   background: linear-gradient(135deg, var(--accent), #8b5cf6);
   box-shadow: 0 8px 25px rgba(79,140,255,.25);
-}
 .nav-links{
   display:flex;align-items:center;gap:12px;
-}
 .nav-links a{
   padding:8px 10px;border-radius:10px;
   color:var(--muted);
-}
-.nav-links a.active, .nav-links a:hover{
+.nav-links a.active, .nav-links a:hover
   background: rgba(255,255,255,.06);
   color:var(--text);
-}
-
 .nav-actions{display:flex;align-items:center;gap:10px}
-.icon-btn{
+.icon-btn
   border:1px solid var(--border);
   background: rgba(255,255,255,.04);
   color:var(--text);
   padding:8px 10px;
   border-radius: 12px;
   cursor:pointer;
-}
-
 .hamburger{display:none}
 .mobile-panel{display:none}
-
-.hero{
+.hero
   display:grid;
   grid-template-columns: 1.15fr .85fr;
   gap:18px;
   align-items:stretch;
-}
 .hero h1{font-size:42px;line-height:1.15;margin:0 0 10px}
 .hero p{color:var(--muted);margin:0 0 16px}
 .hero-media{
@@ -132,13 +109,10 @@ img{max-width:100%;display:block}
   background:#0a1020;
   min-height: 320px;
   display:flex;align-items:center;justify-content:center;
-}
 .hero-media img{width:100%;height:100%;object-fit:cover}
 .kpis{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-
 .cards-3{grid-template-columns: repeat(3, 1fr)}
 .cards-2{grid-template-columns: repeat(2, 1fr)}
-
 label{display:block;margin:10px 0 6px;color:var(--muted);font-size:14px}
 input, textarea, select{
   width:100%;
@@ -148,10 +122,8 @@ input, textarea, select{
   padding:10px 12px;
   color:var(--text);
   outline:none;
-}
 textarea{min-height:110px;resize:vertical}
 small.help{color:var(--muted)}
-
 .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .notice{
   margin-top:10px;
@@ -160,40 +132,30 @@ small.help{color:var(--muted)}
   border:1px solid var(--border);
   background: rgba(255,255,255,.04);
   color: var(--muted);
-}
 .notice.ok{border-color: rgba(34,197,94,.35); color:#c9ffd8}
 .notice.err{border-color: rgba(239,68,68,.35); color:#ffd1d1}
-
 .footer{
   border-top:1px solid var(--border);
   padding:18px 0;
   color:var(--muted);
   font-size:14px;
-}
-
 .video{
   aspect-ratio: 16/9;
   width:100%;
   border-radius: var(--radius);
   overflow:hidden;
   border:1px solid var(--border);
-}
 .video iframe{width:100%;height:100%;border:0}
-
 /* RTL support */
 html[dir="rtl"] body{
   font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-}
 html[dir="rtl"] .nav-links{gap:12px}
 html[dir="rtl"] .row{direction:rtl}
-
 /* Responsive */
 @media (max-width: 900px){
   .hero{grid-template-columns: 1fr}
   .cards-3{grid-template-columns: 1fr}
   .cards-2{grid-template-columns: 1fr}
-}
-
 @media (max-width: 760px){
   .nav-links{display:none}
   .hamburger{display:inline-flex}
@@ -201,17 +163,14 @@ html[dir="rtl"] .row{direction:rtl}
     display:none;
     border-top:1px solid var(--border);
     padding:12px 0;
-  }
   .mobile-panel.open{display:block}
   .mobile-panel a{
     display:block;
     padding:10px 10px;
     border-radius: 12px;
     color:var(--muted);
-  }
   .mobile-panel a:hover{background: rgba(255,255,255,.06); color:var(--text)}
   .nav-actions{gap:8px}
-}
 js/i18n.js
 const I18N = {
   en: {
@@ -268,7 +227,6 @@ const I18N = {
     submitFeedback: "Submit Feedback",
     footer: "Academic project template. Data stored locally in your browser.",
     bookNotice: "Demo booking button: You can extend it later with a booking form."
-  },
   ar: {
     brand: "سمارت ريبير",
     navHome: "الرئيسية",
@@ -312,7 +270,6 @@ const I18N = {
     submitRegister: "إنشاء الحساب",
     aboutTitle: "من نحن - سمارت ريبير",
     aboutText:
-      "سمارت ريبير منصة ويب خفيفة لحجز خدمات الصيانة وتوثيق المستخدم وجمع التغذية الراجعة. تساعد على رفع الشفافية عبر خطوات واضحة للمستخدمين ومراكز الصيانة.",
     aboutBul1: "واجهة نظيفة ومتجاوبة (مناسبة للموبايل).",
     aboutBul2: "توثيق محلي باستخدام تخزين المتصفح (للعرض الأكاديمي).",
     aboutBul3: "جمع الملاحظات مع تقييم وتاريخ الإرسال.",
@@ -323,70 +280,50 @@ const I18N = {
     submitFeedback: "إرسال الملاحظة",
     footer: "قالب مشروع أكاديمي. يتم حفظ البيانات محلياً في المتصفح.",
     bookNotice: "زر الحجز تجريبي: يمكنك لاحقاً إضافة نموذج حجز كامل."
-  }
-};
-
 function getLang(){
   return localStorage.getItem("lang") || "en";
-}
 function setLang(lang){
   localStorage.setItem("lang", lang);
-}
 function applyLang(lang){
   const dict = I18N[lang];
   document.documentElement.lang = lang;
   document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
-
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const key = el.getAttribute("data-i18n");
     if(dict[key] !== undefined) el.textContent = dict[key];
   });
-
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
     const key = el.getAttribute("data-i18n-placeholder");
     if(dict[key] !== undefined) el.setAttribute("placeholder", dict[key]);
   });
-
   const langBtn = document.getElementById("langBtn");
   if(langBtn) langBtn.textContent = dict.langBtn;
-}
-
 document.addEventListener("DOMContentLoaded", ()=>{
   applyLang(getLang());
 });
 js/app.js
 function $(id){ return document.getElementById(id); }
-
 function getUsers(){
   return JSON.parse(localStorage.getItem("users") || "[]");
-}
 function setUsers(users){
   localStorage.setItem("users", JSON.stringify(users));
-}
 function setCurrentUser(user){
   localStorage.setItem("currentUser", JSON.stringify(user));
-}
 function getCurrentUser(){
   return JSON.parse(localStorage.getItem("currentUser") || "null");
-}
 function clearCurrentUser(){
   localStorage.removeItem("currentUser");
-}
-
 function showNotice(el, type, msg){
   if(!el) return;
   el.className = "notice " + (type === "ok" ? "ok" : "err");
   el.textContent = msg;
   el.style.display = "block";
-}
-
 function updateAuthUI(){
   const user = getCurrentUser();
   const loginLink = $("navLogin");
   const regLink = $("navRegister");
   const logoutBtn = $("logoutBtn");
   const userBadge = $("userBadge");
-
   if(user){
     if(loginLink) loginLink.style.display = "none";
     if(regLink) regLink.style.display = "none";
@@ -394,15 +331,11 @@ function updateAuthUI(){
     if(userBadge){
       userBadge.style.display = "inline-flex";
       userBadge.textContent = user.name;
-    }
   }else{
     if(loginLink) loginLink.style.display = "inline-flex";
     if(regLink) regLink.style.display = "inline-flex";
     if(logoutBtn) logoutBtn.style.display = "none";
     if(userBadge) userBadge.style.display = "none";
-  }
-}
-
 function bindNavbar(){
   const burger = $("burger");
   const panel = $("mobilePanel");
@@ -410,8 +343,6 @@ function bindNavbar(){
     burger.addEventListener("click", ()=>{
       panel.classList.toggle("open");
     });
-  }
-
   const langBtn = $("langBtn");
   if(langBtn){
     langBtn.addEventListener("click", ()=>{
@@ -420,43 +351,30 @@ function bindNavbar(){
       setLang(next);
       applyLang(next);
     });
-  }
-
   const logoutBtn = $("logoutBtn");
   if(logoutBtn){
     logoutBtn.addEventListener("click", ()=>{
       clearCurrentUser();
       updateAuthUI();
-    });
-  }
-}
-
 function bindAuthForms(){
   const loginForm = $("loginForm");
   const regForm = $("registerForm");
-
   if(loginForm){
     loginForm.addEventListener("submit", (e)=>{
       e.preventDefault();
       const email = $("loginEmail").value.trim().toLowerCase();
       const password = $("loginPassword").value;
-
       const users = getUsers();
       const user = users.find(u => u.email === email && u.password === password);
-
       const notice = $("loginNotice");
       if(!user){
         showNotice(notice, "err", (getLang()==="ar") ? "بيانات الدخول غير صحيحة." : "Invalid login credentials.");
         return;
-      }
-
       setCurrentUser({name:user.name, email:user.email});
       showNotice(notice, "ok", (getLang()==="ar") ? "تم تسجيل الدخول بنجاح." : "Logged in successfully.");
       updateAuthUI();
       loginForm.reset();
     });
-  }
-
   if(regForm){
     regForm.addEventListener("submit", (e)=>{
       e.preventDefault();
@@ -464,50 +382,34 @@ function bindAuthForms(){
       const email = $("regEmail").value.trim().toLowerCase();
       const pass = $("regPassword").value;
       const confirm = $("regConfirm").value;
-
       const notice = $("registerNotice");
-
       if(pass.length < 6){
         showNotice(notice, "err", (getLang()==="ar") ? "كلمة المرور يجب أن تكون 6 أحرف على الأقل." : "Password must be at least 6 characters.");
         return;
-      }
       if(pass !== confirm){
         showNotice(notice, "err", (getLang()==="ar") ? "كلمتا المرور غير متطابقتين." : "Passwords do not match.");
         return;
-      }
-
       const users = getUsers();
       if(users.some(u=>u.email === email)){
         showNotice(notice, "err", (getLang()==="ar") ? "هذا البريد مسجل مسبقاً." : "Email is already registered.");
         return;
-      }
-
       users.push({name, email, password: pass});
       setUsers(users);
       showNotice(notice, "ok", (getLang()==="ar") ? "تم إنشاء الحساب بنجاح." : "Account created successfully.");
       regForm.reset();
-    });
-  }
-}
-
 function bindFeedbackForm(){
   const form = $("feedbackForm");
   if(!form) return;
-
   form.addEventListener("submit", (e)=>{
     e.preventDefault();
-
     const name = $("fbName").value.trim();
     const email = $("fbEmail").value.trim();
     const rating = $("fbRating").value;
     const message = $("fbMessage").value.trim();
     const notice = $("feedbackNotice");
-
     if(!name || !email || !message){
       showNotice(notice, "err", (getLang()==="ar") ? "يرجى ملء جميع الحقول المطلوبة." : "Please fill all required fields.");
       return;
-    }
-
     const list = JSON.parse(localStorage.getItem("feedback") || "[]");
     list.push({
       name, email, rating,
@@ -519,8 +421,6 @@ function bindFeedbackForm(){
     showNotice(notice, "ok", (getLang()==="ar") ? "تم إرسال ملاحظتك بنجاح." : "Feedback submitted successfully.");
     form.reset();
   });
-}
-
 function markActiveNav(){
   const path = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links a").forEach(a=>{
@@ -531,8 +431,6 @@ function markActiveNav(){
     const href = a.getAttribute("href");
     if(href === path) a.style.background = "rgba(255,255,255,.06)";
   });
-}
-
 document.addEventListener("DOMContentLoaded", ()=>{
   bindNavbar();
   bindAuthForms();
@@ -550,7 +448,6 @@ index.html
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
   <header class="nav">
     <div class="container">
       <div class="nav-inner">
@@ -558,13 +455,11 @@ index.html
           <span class="brand-mark"></span>
           <span data-i18n="brand">SmartRepair</span>
         </a>
-
         <nav class="nav-links">
           <a href="index.html" data-i18n="navHome">Home</a>
           <a href="about.html" data-i18n="navAbout">About</a>
           <a href="contact.html" data-i18n="navContact">Contact</a>
         </nav>
-
         <div class="nav-actions">
           <span id="userBadge" class="badge" style="display:none;"></span>
           <a id="navLogin" class="btn" href="#auth" data-i18n="navLogin">Login</a>
@@ -574,7 +469,6 @@ index.html
           <button id="burger" class="icon-btn hamburger">☰</button>
         </div>
       </div>
-
       <div id="mobilePanel" class="mobile-panel">
         <a href="index.html" data-i18n="navHome">Home</a>
         <a href="about.html" data-i18n="navAbout">About</a>
@@ -582,7 +476,6 @@ index.html
       </div>
     </div>
   </header>
-
   <main>
     <section class="section">
       <div class="container hero">
@@ -592,34 +485,27 @@ index.html
           <p data-i18n="heroText">
             Book your phone or laptop repair, track the status, and share feedback—all in one place.
           </p>
-
           <div style="display:flex; gap:10px; flex-wrap:wrap;">
             <button class="btn primary" id="bookBtn" data-i18n="ctaBook">Book Repair</button>
             <a class="btn" href="about.html" data-i18n="ctaLearn">Learn More</a>
           </div>
-
           <div class="notice" id="bookNotice" style="display:none; margin-top:12px;" data-i18n="bookNotice">
             Demo booking button: You can extend it later with a booking form.
           </div>
-
           <div class="kpis">
             <span class="badge" data-i18n="kpi1">Same-day options</span>
             <span class="badge" data-i18n="kpi2">Status tracking</span>
             <span class="badge" data-i18n="kpi3">Secure login</span>
           </div>
         </div>
-
         <div class="hero-media">
-          <!-- ضع صورة داخل assets باسم hero.jpg -->
           <img src="assets/hero.jpg" alt="Repair service" />
         </div>
       </div>
     </section>
-
     <section class="section">
       <div class="container">
         <h2 style="margin:0 0 12px" data-i18n="servicesTitle">Services</h2>
-
         <div class="grid cards-3">
           <div class="card">
             <h3 style="margin:0 0 8px" data-i18n="s1Title">Phone Screen Repair</h3>
@@ -636,11 +522,9 @@ index.html
         </div>
       </div>
     </section>
-
     <section class="section">
       <div class="container">
         <h2 style="margin:0 0 12px" data-i18n="howTitle">How it works</h2>
-
         <div class="grid cards-3">
           <div class="card">
             <h3 style="margin:0 0 8px" data-i18n="h1">Create an account</h3>
@@ -657,7 +541,6 @@ index.html
         </div>
       </div>
     </section>
-
     <section class="section" id="auth">
       <div class="container">
         <div class="card">
@@ -665,7 +548,6 @@ index.html
           <p style="margin:0 0 14px;color:var(--muted)" data-i18n="authText">
             Register or login to access booking and personalized features.
           </p>
-
           <div class="grid cards-2">
             <div class="card">
               <h3 style="margin:0 0 10px" data-i18n="loginTitle">Login</h3>
@@ -678,7 +560,6 @@ index.html
                 <div id="loginNotice" class="notice" style="display:none"></div>
               </form>
             </div>
-
             <div class="card">
               <h3 style="margin:0 0 10px" data-i18n="registerTitle">Register</h3>
               <form id="registerForm">
@@ -702,17 +583,14 @@ index.html
               </form>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
     <section class="section">
       <div class="container">
         <div class="card">
           <h2 style="margin:0 0 12px">Media</h2>
           <div class="video">
-            <!-- يمكنك تغيير رابط الفيديو -->
             <iframe
               src="https://www.youtube.com/embed/1wfeqDyMUx4"
               title="How device repair works"
@@ -723,13 +601,10 @@ index.html
         </div>
       </div>
     </section>
-
   </main>
-
   <footer class="footer">
     <div class="container" data-i18n="footer">Academic project template. Data stored locally in your browser.</div>
   </footer>
-
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
   <script>
@@ -750,7 +625,6 @@ about.html
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
   <header class="nav">
     <div class="container">
       <div class="nav-inner">
@@ -758,13 +632,11 @@ about.html
           <span class="brand-mark"></span>
           <span data-i18n="brand">SmartRepair</span>
         </a>
-
         <nav class="nav-links">
           <a href="index.html" data-i18n="navHome">Home</a>
           <a href="about.html" data-i18n="navAbout">About</a>
           <a href="contact.html" data-i18n="navContact">Contact</a>
         </nav>
-
         <div class="nav-actions">
           <span id="userBadge" class="badge" style="display:none;"></span>
           <a id="navLogin" class="btn" href="index.html#auth" data-i18n="navLogin">Login</a>
@@ -774,7 +646,6 @@ about.html
           <button id="burger" class="icon-btn hamburger">☰</button>
         </div>
       </div>
-
       <div id="mobilePanel" class="mobile-panel">
         <a href="index.html" data-i18n="navHome">Home</a>
         <a href="about.html" data-i18n="navAbout">About</a>
@@ -782,13 +653,11 @@ about.html
       </div>
     </div>
   </header>
-
   <main class="section">
     <div class="container">
       <div class="card">
         <h1 style="margin:0 0 10px" data-i18n="aboutTitle">About SmartRepair</h1>
         <p style="margin:0;color:var(--muted)" data-i18n="aboutText"></p>
-
         <div class="grid cards-3" style="margin-top:14px;">
           <div class="card"><span data-i18n="aboutBul1"></span></div>
           <div class="card"><span data-i18n="aboutBul2"></span></div>
@@ -797,11 +666,9 @@ about.html
       </div>
     </div>
   </main>
-
   <footer class="footer">
     <div class="container" data-i18n="footer">Academic project template. Data stored locally in your browser.</div>
   </footer>
-
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
@@ -816,7 +683,6 @@ contact.html
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
   <header class="nav">
     <div class="container">
       <div class="nav-inner">
@@ -824,13 +690,11 @@ contact.html
           <span class="brand-mark"></span>
           <span data-i18n="brand">SmartRepair</span>
         </a>
-
         <nav class="nav-links">
           <a href="index.html" data-i18n="navHome">Home</a>
           <a href="about.html" data-i18n="navAbout">About</a>
           <a href="contact.html" data-i18n="navContact">Contact</a>
         </nav>
-
         <div class="nav-actions">
           <span id="userBadge" class="badge" style="display:none;"></span>
           <a id="navLogin" class="btn" href="index.html#auth" data-i18n="navLogin">Login</a>
@@ -840,7 +704,6 @@ contact.html
           <button id="burger" class="icon-btn hamburger">☰</button>
         </div>
       </div>
-
       <div id="mobilePanel" class="mobile-panel">
         <a href="index.html" data-i18n="navHome">Home</a>
         <a href="about.html" data-i18n="navAbout">About</a>
@@ -848,13 +711,11 @@ contact.html
       </div>
     </div>
   </header>
-
   <main class="section">
     <div class="container">
       <div class="card">
         <h1 style="margin:0 0 8px" data-i18n="contactTitle">Contact & Feedback</h1>
         <p style="margin:0 0 14px;color:var(--muted)" data-i18n="contactText"></p>
-
         <form id="feedbackForm">
           <div class="row">
             <div>
@@ -866,7 +727,6 @@ contact.html
               <input id="fbEmail" type="email" required placeholder="email@example.com" />
             </div>
           </div>
-
           <div class="row">
             <div>
               <label data-i18n="rating">Rating</label>
@@ -883,21 +743,17 @@ contact.html
               <small class="help">You can add phone number field if required.</small>
             </div>
           </div>
-
           <label data-i18n="message">Message</label>
           <textarea id="fbMessage" required></textarea>
-
           <button class="btn success" type="submit" style="margin-top:12px" data-i18n="submitFeedback">Submit Feedback</button>
           <div id="feedbackNotice" class="notice" style="display:none"></div>
         </form>
       </div>
     </div>
   </main>
-
   <footer class="footer">
     <div class="container" data-i18n="footer">Academic project template. Data stored locally in your browser.</div>
   </footer>
-
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
